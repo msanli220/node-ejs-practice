@@ -10,6 +10,8 @@ app.get("/profile", (req, res) => {
   res.render("profile.ejs", { name, age }); 
 });
 
+
+
 app.get("/news", (req, res) => {
   let name = req.query.name;
   let age = req.query.age;
@@ -22,10 +24,13 @@ app.get("/shop", (req, res) => {
   res.render("shop.ejs", { name, age }); 
 });
 
+
+var songs = ["dream on", "Rockn roll until we die", "territory", "Lemonade"]
+
 app.get("/songs", (req, res) => {
-  let name = req.query.name;
-  let age = req.query.age;
-  res.render("songs.ejs", { name, age }); 
+
+
+  res.render("songs.ejs", songs); 
 });
 
 app.get("/events", (req, res) => {
